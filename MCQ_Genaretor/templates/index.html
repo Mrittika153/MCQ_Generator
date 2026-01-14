@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MCQ Generator</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body class="animated-bg">
+
+<div class="container d-flex justify-content-center align-items-center" style="min-height: 100vh;">
+    <div class="result-card p-4 text-center">
+
+        <div class="mb-3">
+            <span style="font-size: 48px;">📘</span>
+        </div>
+
+        <h2 class="mb-2">MCQ Generator</h2>
+        <p class="subtitle mb-4">
+            Upload a document and instantly generate multiple-choice questions
+        </p>
+
+        <form method="POST" action="/generate" enctype="multipart/form-data">
+
+            <div class="mb-3 text-start">
+                <label class="form-label fw-semibold">Choose File</label>
+                <input class="form-control" type="file" name="file" required>
+            </div>
+
+            <div class="mb-3 text-start">
+                <label class="form-label fw-semibold">Number of Questions</label>
+                <input class="form-control" type="number" name="num_questions" min="1" value="5" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100 mt-3">
+                Generate MCQs
+            </button>
+
+        </form>
+
+        <div class="mt-4 text-muted" style="font-size: 14px;">
+            Supports PDF, DOCX & TXT files
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>

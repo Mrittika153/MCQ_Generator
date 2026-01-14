@@ -1,0 +1,57 @@
+/* Animated background ONLY */
+.animated-bg {
+    min-height: 100vh;
+    background: linear-gradient(
+        -45deg,
+        #667eea,
+        #764ba2,
+        #ff758c,
+        #43cea2
+    );
+    background-size: 400% 400%;
+    animation: bgMove 12s ease infinite;
+    padding: 20px;
+}
+
+@keyframes bgMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* White Result Card */
+.result-card {
+    max-width: 900px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+/* MCQ Text Box */
+.mcq-box {
+    background: #fafafa;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    white-space: pre-wrap;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+/* Headings */
+h2 {
+    color: #4b4b7c;
+    font-weight: 800;
+}
+
+/* Buttons */
+.btn {
+    border-radius: 30px;
+    padding: 8px 22px;
+    font-weight: 600;
+}
+
+/* Improve readability */
+a {
+    text-decoration: none;
+}
